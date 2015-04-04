@@ -1,0 +1,252 @@
+cd ../test; make test
+make[1]: Entering directory `/home/assay/work/primer3-2.3.6/test'
+cd ../src; make
+make[2]: Entering directory `/home/assay/work/primer3-2.3.6/src'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/assay/work/primer3-2.3.6/src'
+perl cmdline_test.pl 
+
+
+TESTING command line arguments
+
+Test 1... [OK]
+Test 2... [OK]
+Test 3... [OK]
+Test 4... [OK]
+Test 5... [OK]
+Passed all tests - [OK]
+
+
+perl oligotm_test.pl 
+
+TESTING Tm CALCULATIONS
+
+Tm tests nr 1-47: OK
+
+
+echo; echo; echo 'TESTING ALIGNMENT CALCS'; echo; perl dpal_test.pl ; 
+
+
+TESTING ALIGNMENT CALCS
+
+Error handling of too-long sequence...[OK]
+Default implementations + alignment...[OK]
+Default implementations + NO alignment 1...[OK]
+Default implementations + NO alignment 2...[OK]
+Force _dpal_generic...[OK]
+Force _dpal_long_nopath_generic 1...[OK]
+Force _dpal_long_nopath_generic 2...[OK]
+Force long maxgap1 functions 1...[OK]
+Force long maxgap1 functions 2...[OK]
+echo; echo; echo 'TESTING THERMODYNAMIC ALIGNMENT CALCS'; echo; perl thal_test.pl ;
+
+
+TESTING THERMODYNAMIC ALIGNMENT CALCS
+
+Error handling of too-long sequence...
+1................................... [OK]
+Default implementations + alignment...[OK]
+Default implementations + NO alignment 1...[OK]
+Default implementations + NO alignment 2...[OK]
+echo; echo; echo 'TESTING primer3_core'; echo; perl p3test.pl 
+
+
+TESTING primer3_core
+
+p3test.pl for primer3_core version 2.3.6
+
+
+p3test.pl: testing ../src/primer3_core
+
+START, Fri Apr  3 18:36:38 2015
+
+testing fatal errors...
+  ./primer_global_err/bad_divalent_dntp_conc_1
+Testing -output and -error flags on
+../src/primer3_core -strict_tags ./primer_global_err/bad_divalent_dntp_conc_1.in -output ./primer_global_err/bad_divalent_dntp_conc_1.tmp -error ./primer_global_err/bad_divalent_dntp_conc_1.tmp2
+  ./primer_global_err/bad_divalent_dntp_conc_2
+  ./primer_global_err/bad_divalent_dntp_conc_3
+  ./primer_global_err/bad_divalent_dntp_conc_4
+  ./primer_global_err/bad_dna_conc
+  ./primer_global_err/bad_first_base_index
+  ./primer_global_err/bad_float_1
+  ./primer_global_err/bad_float_2
+  ./primer_global_err/bad_float_3
+  ./primer_global_err/bad_float_4
+  ./primer_global_err/bad_gc_1
+  ./primer_global_err/bad_gc_2
+  ./primer_global_err/bad_gc_3
+  ./primer_global_err/bad_gc_int_1
+  ./primer_global_err/bad_gc_int_2
+  ./primer_global_err/bad_gc_int_3
+  ./primer_global_err/bad_min_three_prime_distance
+  ./primer_global_err/bad_num_ns
+  ./primer_global_err/bad_num_ns_int
+  ./primer_global_err/bad_product_sizes_1
+  ./primer_global_err/bad_product_sizes_2
+  ./primer_global_err/bad_product_sizes_3
+  ./primer_global_err/bad_product_sizes_4
+  ./primer_global_err/bad_salt_conc
+  ./primer_global_err/bad_self_any
+  ./primer_global_err/bad_self_any_int
+  ./primer_global_err/bad_self_end
+  ./primer_global_err/bad_self_end_int
+  ./primer_global_err/bad_settings0
+  ./primer_global_err/bad_settings1
+  ./primer_global_err/bad_settings2
+  ./primer_global_err/bad_settings3
+  ./primer_global_err/bad_settings4
+  ./primer_global_err/bad_settings5
+  ./primer_global_err/bad_settings6
+  ./primer_global_err/empty_1
+  ./primer_global_err/empty_product_size
+  ./primer_global_err/gc_clamp_min_size
+  ./primer_global_err/incorrect_task
+  ./primer_global_err/io_gc_content_obj_fn
+  ./primer_global_err/io_obj_fn
+  ./primer_global_err/junction_overlap_max_size
+  ./primer_global_err/junction_overlap_min_size
+  ./primer_global_err/max_min_tm
+  ./primer_global_err/max_min_tm_int
+  ./primer_global_err/max_opt_tm
+  ./primer_global_err/max_opt_tm_int
+  ./primer_global_err/MAX_PRIMER_LENGTH
+  ./primer_global_err/max_size_limit_int
+  ./primer_global_err/max_size_min_product
+  ./primer_global_err/max_size_min_product_int
+  ./primer_global_err/min_opt_tm
+  ./primer_global_err/min_opt_tm_int
+  ./primer_global_err/mishyb_obj_fn
+  ./primer_global_err/mispr_obj_fn
+  ./primer_global_err/must_match_length_0
+  ./primer_global_err/must_match_length_1
+  ./primer_global_err/must_match_length_10
+  ./primer_global_err/must_match_length_2
+  ./primer_global_err/must_match_length_3
+  ./primer_global_err/must_match_length_4
+  ./primer_global_err/must_match_length_5
+  ./primer_global_err/must_match_length_6
+  ./primer_global_err/must_match_length_7
+  ./primer_global_err/must_match_length_8
+  ./primer_global_err/must_match_length_9
+  ./primer_global_err/no_equal
+  ./primer_global_err/no_terminal_equal
+  ./primer_global_err/opt_max_size
+  ./primer_global_err/opt_max_size_int
+  ./primer_global_err/opt_min_size
+  ./primer_global_err/opt_min_size_int
+  ./primer_global_err/pair_mispr
+  ./primer_global_err/pr_gc_content_obj_fn
+  ./primer_global_err/product_size_obj_fn
+  ./primer_global_err/product_tm_obj_fn
+  ./primer_global_err/repeat_lib_err
+  ./primer_global_err/repeat_lib_err1
+  ./primer_global_err/repeat_lib_err2
+  ./primer_global_err/repeat_lib_err3
+  ./primer_global_err/repeat_lib_err4
+  ./primer_global_err/repeat_lib_err5
+  ./primer_global_err/repeat_lib_err6
+  ./primer_global_err/repeat_lib_int_err
+  ./primer_global_err/repeat_lib_int_err1
+  ./primer_global_err/repeat_lib_int_err2
+  ./primer_global_err/repeat_lib_int_err3
+  ./primer_global_err/repeat_lib_int_err4
+  ./primer_global_err/repeat_lib_int_err5
+  ./primer_global_err/repeat_lib_int_err6
+  ./primer_global_err/seq_quality1
+  ./primer_global_err/seq_quality2
+  ./primer_global_err/seq_quality3
+  ./primer_global_err/seq_quality4
+  ./primer_global_err/too_many_product_sizes
+  ./primer_global_err/zero_min_size
+  ./primer_global_err/zero_num_return
+[OK]
+primer_must_use_th...0s [OK]
+primer_task_th...0s [OK]
+primer_thal_args...0s [OK]
+primer_thal_max_seq_error...1s [OK]
+primer_first_base_index...0s [OK]
+primer_must_match...0s [OK]
+test_compl_error...0s [OK]
+test_left_to_right_of_right...0s [OK]
+dv_conc_vs_dntp_conc...0s [OK]
+primer_boundary...0s [OK]
+primer_boundary1...0s [OK]
+primer_boundary_formatted...0s [OK]
+primer_boundary1_formatted...0s [OK]
+primer3_v1_1_4_default_settings...0s [OK]
+primer3web_v0_4_0_default_settings...0s [OK]
+primer3web_v3_0_0_default_settings...1s [OK]
+primer3web_v4_0_0_default_settings...0s [OK]
+primer_internal...0s [OK]
+primer_internal1...0s [OK]
+primer_internal_formatted...0s [OK]
+primer_internal1_formatted...0s [OK]
+primer_ok_regions...0s [OK]
+primer_ok_regions_formatted...0s [OK]
+primer_ok_regions2...6s [OK]
+primer_tm_lc_masking...0s [OK]
+primer_tm_lc_masking_formatted...0s [OK]
+primer_start_codon...0s [OK]
+primer_task...0s [OK]
+primer_task_formatted...0s [OK]
+primer_renewed_tasks...0s [OK]
+primer_new_tasks...1s [OK]
+primer_new_tasks_formatted...1s [OK]
+primer_must_overlap_point...0s [OK]
+primer_overlap_junction...0s [OK]
+primer_all_settingsfiles...0s [OK]
+primer_high_tm_load_set...0s [OK]
+primer_high_gc_load_set...0s [OK]
+primer_gc_end...1s [OK]
+primer_check...0s [OK]
+primer_must_use...0s [OK]
+primer_must_use_formatted...0s [OK]
+primer_syntax...0s [OK]
+primer_end_pathology...0s [OK]
+primer_num_best...0s [OK]
+primer_quality_boundary...0s [OK]
+primer...1s [OK]
+primer_list_files...[OK]
+primer1...1s [OK]
+primer1_list_files...[OK]
+primer_mispriming...0s [OK]
+primer_mispriming_formatted...1s [OK]
+primer_mispriming_boundary1...0s [OK]
+primer_mispriming_boundary1_formatted...0s [OK]
+primer_mispriming_boundary2...0s [OK]
+primer_mispriming_boundary2_formatted...0s [OK]
+primer_mispriming_long_lib...0s [OK]
+primer_rat...0s [OK]
+primer_human...2s [OK]
+long_seq...0s [OK]
+primer_position_penalty...1s [OK]
+primer_position_penalty_formatted...0s [OK]
+p3-tmpl-mispriming...1s [OK]
+primer_three_prime_distance...0s [OK]
+primer_obj_fn...2s [OK]
+p3_3_prime_n...0s [OK]
+primer_mispriming_th...6s [OK]
+th-w-other-tasks...18s [OK]
+th-w-other-tasks_list_files...[OK]
+primer_new_tasks_th...10s [OK]
+primer_thermod_align...22s [OK]
+primer_thermod_align_formatted...21s [OK]
+primer1_th...57s [OK]
+primer1_th_list_files...[OK]
+primer_lib_amb_codes...
+NOTE: this test takes _much_ longer than the others (10 to 20 minutes or more).
+starting primer_lib_amb_codes at Fri Apr  3 18:39:13 2015...155s [OK]
+
+Tests in p3test.pl ran for 310 s (5.16666666666667 min)
+
+DONE Fri Apr  3 18:41:48 2015 Passed all tests - [OK]
+
+
+echo; echo; echo "Testing completed. You must check the test output for the string FAILED"; echo; echo;
+
+
+Testing completed. You must check the test output for the string FAILED
+
+
+make[1]: Leaving directory `/home/assay/work/primer3-2.3.6/test'
