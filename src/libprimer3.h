@@ -259,7 +259,7 @@ typedef struct args_for_one_oligo_or_primer {
 } args_for_one_oligo_or_primer;
 
 /* Maxima needed for interface data structures. */
-#define PR_MAX_INTERVAL_ARRAY 200 
+#define PR_MAX_INTERVAL_ARRAY 500 
 /* 
  * Maximum number of input intervals
  * supported; used for targets, excluded
